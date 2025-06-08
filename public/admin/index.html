@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sengani Girls School - Content Manager</title>
+    <!-- Include the Decap CMS script -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <style>
+      /* Custom styling for the admin interface */
+      body {
+        font-family: 'Exo 2', sans-serif;
+        background-color: #0B0B3B;
+        color: #F8F8FF;
+      }
+      .header {
+        background-color: #0B0B3B;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #FFD700;
+      }
+      .header h1 {
+        color: #FFD700;
+        margin: 0;
+      }
+      /* Custom loader styling */
+      .nc-app-loading-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .custom-loader {
+        border: 5px solid rgba(102, 51, 153, 0.3);
+        border-radius: 50%;
+        border-top: 5px solid #FFD700;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      /* Login form styling */
+      .login-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .login-title {
+        text-align: center;
+        color: #FFD700;
+        margin-bottom: 20px;
+      }
+      .login-form {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #F8F8FF;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        color: #F8F8FF;
+      }
+      .login-button {
+        background: linear-gradient(135deg, #9370DB, #4B0082);
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .login-button:hover {
+        background: linear-gradient(135deg, #8A2BE2, #4B0082);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Sengani Girls School - Content Manager</h1>
+    </div>
+    
+    <!-- Custom loading animation -->
+    <div class="nc-app-loading-container">
+      <div class="custom-loader"></div>
+      <p>Loading Content Management System...</p>
+    </div>
+    
+    <script>
+      // Add custom preview styles
+      CMS.registerPreviewStyle('/admin/preview.css');
+      
+      // Initialize Netlify Identity
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            // Show custom login form if user is not logged in
+            document.querySelector('.nc-app-loading-container').style.display = 'none';
+            const loginContainer = document.createElement('div');
+            loginContainer.className = 'login-container';
+            loginContainer.innerHTML = `
+              <h2 class="login-title">Login to CMS</h2>
+              <div class="login-form">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="button" class="login-button" id="login-button">Login</button>
+              </div>
+            `;
+            document.body.appendChild(loginContainer);
+            
+            // Add login button event listener
+            document.getElementById('login-button').addEventListener('click', () => {
+              const email = document.getElementById('email').value;
+              const password = document.getElementById('password').value;
+              
+              if (email && password) {
+                window.netlifyIdentity.open('login');
+              }
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+
