@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (defaults to master if not specified)
+  repo: Sirm-O/sghs # Your GitHub username/repo
+  site_domain: aicsghs.netlify.app
+
+# Site URLs
+site_url: https://aicsghs.netlify.app
+display_url: https://aicsghs.netlify.app
+logo_url: https://aicsghs.netlify.app/images/logo.png
+
+# Media and public folders
+media_folder: "public/images/uploads" # Media files will be stored in the repo under public/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+# Collections define the structure for the different content types
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "public/content/pages"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Content", name: "content", widget: "markdown"}
+      
+  - name: "gallery_photos"
+    label: "Gallery Photos"
+    folder: "public/content/gallery/photos"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Category", name: "category", widget: "select", options: ["Campus Life", "Academic Events", "Sports & Activities", "Special Events"]}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      
+  - name: "gallery_videos"
+    label: "Gallery Videos"
+    folder: "public/content/gallery/videos"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Video Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Video URL", name: "video_url", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["School Events", "Academic Presentations", "Sports Competitions", "Cultural Performances"]}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+

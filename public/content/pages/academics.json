@@ -1,0 +1,47 @@
+{
+  "title": "Academics",
+  "description": "Comprehensive education programs designed to nurture academic excellence and critical thinking.",
+  "curriculum": {
+    "title": "Our Curriculum",
+    "description": "Our curriculum is designed to provide a well-rounded education that prepares students for higher education and future careers."
+  },
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "icon": "Calculator",
+      "description": "Advanced mathematical concepts and problem-solving skills"
+    },
+    {
+      "name": "Science",
+      "icon": "Microscope",
+      "description": "Physics, Chemistry, and Biology with hands-on laboratory experience"
+    },
+    {
+      "name": "Languages",
+      "icon": "Globe",
+      "description": "Tamil, English, and Hindi language proficiency"
+    },
+    {
+      "name": "Arts",
+      "icon": "Palette",
+      "description": "Visual arts, crafts, and creative expression"
+    },
+    {
+      "name": "Music",
+      "icon": "Music",
+      "description": "Classical and contemporary music education"
+    },
+    {
+      "name": "Literature",
+      "icon": "BookOpen",
+      "description": "Literary analysis and creative writing skills"
+    }
+  ],
+  "achievements": [
+    "State-level Science Fair Winners",
+    "District Mathematics Olympiad Champions",
+    "Regional Debate Competition Winners",
+    "100% Pass Rate in Board Examinations"
+  ]
+}
+

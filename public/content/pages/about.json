@@ -1,0 +1,35 @@
+{
+  "title": "About Sengani Girls School",
+  "description": "Empowering young women through quality education and holistic development since 1985.",
+  "history": {
+    "title": "Our History",
+    "content": "Sengani Girls School was established in 1985 with a vision to provide quality education to girls in rural Tamil Nadu. Over the years, we have grown from a small institution to a recognized center of excellence."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "content": "To provide a nurturing environment where young women can develop their academic abilities, character, and leadership skills to become confident, compassionate, and capable individuals."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "content": "To be a leading educational institution that empowers young women to excel academically, contribute meaningfully to society, and lead with integrity and purpose."
+  },
+  "values": [
+    {
+      "title": "Excellence",
+      "description": "We strive for the highest standards in all aspects of education and personal development."
+    },
+    {
+      "title": "Integrity",
+      "description": "We uphold honesty, transparency, and ethical behavior in all our interactions."
+    },
+    {
+      "title": "Empowerment",
+      "description": "We believe in empowering our students to reach their full potential and make a positive impact."
+    },
+    {
+      "title": "Community",
+      "description": "We foster a supportive and inclusive community where everyone feels valued and respected."
+    }
+  ]
+}
+

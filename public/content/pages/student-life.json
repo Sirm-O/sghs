@@ -1,0 +1,45 @@
+{
+  "title": "Student Life",
+  "description": "A vibrant and enriching experience beyond academics.",
+  "holistic": {
+    "title": "Holistic Development",
+    "description": "At Sengani Girls School, we believe in nurturing the whole person. Our programs are designed to develop students intellectually, physically, emotionally, and socially."
+  },
+  "sports": {
+    "title": "Sports & Physical Education",
+    "description": "We offer a variety of sports and physical activities to promote fitness, teamwork, and discipline.",
+    "activities": ["Basketball", "Volleyball", "Athletics", "Yoga", "Badminton", "Kho-Kho"]
+  },
+  "clubs": [
+    {
+      "name": "Science Club",
+      "icon": "Zap",
+      "description": "Exploring scientific concepts through experiments and projects"
+    },
+    {
+      "name": "Literary Club",
+      "icon": "BookOpen",
+      "description": "Enhancing language skills through creative writing and debates"
+    },
+    {
+      "name": "Arts & Crafts Club",
+      "icon": "Palette",
+      "description": "Expressing creativity through various art forms and crafts"
+    },
+    {
+      "name": "Music Club",
+      "icon": "Music",
+      "description": "Learning and performing classical and contemporary music"
+    },
+    {
+      "name": "Social Service Club",
+      "icon": "Heart",
+      "description": "Engaging in community service and social awareness activities"
+    }
+  ],
+  "boarding": {
+    "title": "Boarding Life",
+    "description": "Our boarding facilities provide a safe, supportive, and structured environment for students to live and learn together."
+  }
+}
+

@@ -86,7 +86,8 @@ jspm_packages/
 
 # Gatsby files
 .cache/
-public/
+# Uncomment the line below if you need to track the public folder
+# !public/
 
 # Storybook build outputs
 .out/
@@ -101,4 +102,8 @@ temp/
 
 # Netlify
 .netlify/
+
+# CMS files that should be included
+!public/admin/
+!public/content/
 
